@@ -1,10 +1,21 @@
-Code Snippet for Histogram
-python
-Copy code
-import matplotlib.pyplot as plt
-
 # Histogram of Sleep Duration
 data['Sleep Duration'].plot(kind='hist', bins=20, title='Histogram of Sleep Duration')
 plt.xlabel('Hours')
 plt.ylabel('Frequency')
+plt.show()
+
+# Scatter Plot of Physical Activity Level vs. Sleep Quality
+plt.scatter(data['Physical Activity Level'], data['Quality of Sleep'])
+plt.title('Physical Activity Level vs. Sleep Quality')
+plt.xlabel('Physical Activity Level')
+plt.ylabel('Quality of Sleep')
+plt.show()
+
+# Heatmap of Correlation
+
+selected_columns = ['Age', 'Daily Steps', 'Heart Rate']
+selected_data = data[selected_columns]
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
+plt.title('Heatmap of Correlation Matrix')
+plt.tight_layout()
 plt.show()
