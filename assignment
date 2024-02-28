@@ -1,0 +1,10 @@
+Code Snippet for Histogram
+python
+Copy code
+import matplotlib.pyplot as plt
+
+# Histogram of Sleep Duration
+data['Sleep Duration'].plot(kind='hist', bins=20, title='Histogram of Sleep Duration')
+plt.xlabel('Hours')
+plt.ylabel('Frequency')
+plt.show()
